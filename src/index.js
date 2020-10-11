@@ -938,7 +938,7 @@ class PhoneInput extends React.Component {
         className={containerClasses}
         style={this.props.style || this.props.containerStyle}
         onKeyDown={this.handleKeydown}>
-        {specialLabel && <div className='special-label'>{specialLabel}</div>}
+        {specialLabel && <label className='special-label' {...this.props.labelProps}>{specialLabel}</label>}
         {errorMessage && <div className='invalid-number-message'>{errorMessage}</div>}
         <input
           className={inputClasses}
